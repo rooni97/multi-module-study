@@ -1,0 +1,28 @@
+spring:
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+    hikari:
+      maximum-pool-size: 1
+      connection-timeout: 3000
+
+mybatis:
+  config-location: classpath:/mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    com.zaxxer.hikari.pool.HikariPool: debug
+
+server:
+  port: 8081

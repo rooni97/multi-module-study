@@ -1,0 +1,5 @@
+rootProject.name = 'muilti-module'
+include 'core'
+include 'api'
+include 'my-batis'
+
